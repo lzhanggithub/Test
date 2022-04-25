@@ -161,7 +161,8 @@ public class Algorithms {
 
 			if (curResult == Float.NEGATIVE_INFINITY)
 				return null;
-
+			//curResult is the distance from
+			//referencePoint.getLocId() is
 			locDistanceResultsList.add(0, new LocDistance(curResult, referencePoint.getLocId(), referencePoint.getName()));
 		}
 

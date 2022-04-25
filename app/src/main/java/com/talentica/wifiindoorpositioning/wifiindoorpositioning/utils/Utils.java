@@ -52,6 +52,9 @@ public class Utils {
         return null;
     }
 
+
+    //input: "192 168"
+    //output: 192.00, 168.00
     public static String reduceDecimalPlaces(String location) {
         NumberFormat formatter = new DecimalFormat("#0.00");
         String[] split = location.split(" ");

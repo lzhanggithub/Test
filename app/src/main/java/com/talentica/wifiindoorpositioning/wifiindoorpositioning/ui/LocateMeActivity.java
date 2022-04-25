@@ -104,10 +104,12 @@ public class LocateMeActivity extends AppCompatActivity {
                 if (loc == null) {
                     tvLocation.setText("Location: NA\nNote:Please switch on your wifi and location services with permission provided to App");
                 } else {
+                    //input: "192 168"
+                    //output: 192.00, 168.00
                     String locationValue = Utils.reduceDecimalPlaces(loc.getLocation());
                     tvLocation.setText("Location: " + locationValue);
                     String theDistancefromOrigin = Utils.getTheDistancefromOrigin(loc.getLocation());
-                    tvDistance.setText("The distance from stage area is: " + theDistancefromOrigin + "m");
+                    tvDistance.setText("The distance from origin area is: " + theDistancefromOrigin + "m");
                     LocDistance theNearestPoint = Utils.getTheNearestPoint(loc);
                     if (theNearestPoint != null) {
                         tvNearestLocation.setText("You are near to: " + theNearestPoint.getName());
